@@ -6,7 +6,7 @@ const noteRouter = express.Router()
 noteRouter.post('/create', async (req, res) => {
     // if (!req.user) return res.status(401).json({ message: 'Unauthorized' })
     // console.log(req.body, req.user);
-
+    
     const { title, content, status } = req.body;
     const userId = req.user._id
     try {
